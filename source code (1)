@@ -1,0 +1,58 @@
+// Finding empty or black cell from the array
+#include <stdio.h> // header file
+
+int main()
+{
+   int r,c,i,j; // intializing rows&columns
+    printf("number of row:"); // printing of rows
+    scanf("%d",&r);
+    printf("number of column:");//printing of columns
+    scanf("%d",&c);
+    int a[r][c];        /* The allocated size for the array of [r][c]*/
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            scanf("%d",&a[i][j]);  // asssigning elements to the matrix
+        }
+    }
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)     //we are using incremenrt operator &looping method to build an matrix using the array 
+        {
+            printf("%d ",a[i][j]);
+        }
+        printf("\n");
+    }
+    int s=0,count,count1=1;
+    for(int v=0;v<r;v++)
+    {
+    for(s=0;s<c;s++)
+    
+    {
+        for(i=0;i<r;i++)
+        {
+            for(j=0;j<c;j++)
+            {
+                if(a[v][s]==a[i][j])
+                {
+                    count = a[i][j];
+                    count1=count1+1;     //To display it in as each element  in a matrix form we are  using count ,count1+1
+                }
+            }
+        }
+    }
+    }
+    
+    printf("%d\n%d",count,count1); //printing the matrix a[][]
+    return 0;                       //The displayed matix will be in r*c matrix type based on the size which we are allocating
+}
+/* Workinng of c programme
+1) intializing rows&columns
+2) printing of rows &columns
+3) The allocated size for the array of [r][c]
+4) asssigning elements to the matrix
+5) we are using incremenrt operator &looping method to build an matrix using the array
+6)To display it in as each element  in a matrix form we are  using count ,count1+1
+7)printing the matrix 
+8)The displayed matix will be in r*c matrix type based on the size which we are allocating */
