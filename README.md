@@ -1,0 +1,1 @@
+# empty-or-black-cell.h
